@@ -1,0 +1,103 @@
+:root {
+    background-color: #1c1c1c;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.main {
+    height: calc(100vh - 300px);
+    background: #181818;
+    padding-block: 150px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+}
+
+/* Search Bar & Logo */
+#search_section,
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    padding-top: 40px;
+}
+
+#search_box {
+    width: 666px;
+    text-align: center;
+    padding-block: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: #494949;
+    color: #aeaeae
+}
+
+/* Bookmarks */
+.bookmarks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Primary/secondary Bookmarks shared style */
+#primary_bookmarks,
+#secondary_bookmarks {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Primary Bookmarks Section */
+.bookmark_logos {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+}
+
+.bookmark_logos li {
+    text-decoration: none;
+    list-style: none;
+}
+
+.bookmark_logos img {
+    height: 40px;
+}
+
+/* Secondary Bookmarks Section */
+#secondary_bookmarks img {
+    height: 25px;
+}
+
+/* Effects */
+* {
+    transition: all 0.2s;
+}
+.bookmark_logos img:hover {
+    scale: 1.2;
+    animation: throbbing 0.5s ease-in-out infinite;
+}
+#search_box:focus {
+    outline: none;
+    scale: 1.2;
+}
+
+/* keyframes */
+@keyframes throbbing {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.35);
+    }
+}
